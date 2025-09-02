@@ -1,0 +1,15 @@
+{
+    "chat.agent.enabled": true,
+    "chat.tools.autoApprove": true,
+    "chat.agent.maxRequests": 100,
+    "chat.todoListTool.enabled": true,
+    "chat.promptFiles": true,
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        "You are an expert commit message author. When asked to produce commit messages for a set of code changes, always generate three outputs: (1) a single-line Conventional Commit header (type(scope): short summary) — subject ≤ 50 characters, imperative mood, no trailing period; (2) a full commit message: header, blank line, body wrapped at 72 chars explaining what changed, why, testing steps, impact, and a Footer with BREAKING CHANGE or Refs if applicable; (3) a terse one-line git-log summary (~72 chars, imperative).",
+        "Use one of these Conventional Commit types: feat, fix, docs, style, refactor, perf, test, build, ci, chore. Include scope when relevant. Use imperative present tense (e.g., \"add\", not \"added\"). Always state the rationale: why the change was made and what it affects.",
+        "If the changes are large or risky, include a recommended checklist for tests, migration steps, and follow-up actions. If required context (files changed, intent, tests added, breaking changes) is missing, ask 1–2 targeted clarifying questions before producing the message.",
+        "Provide two short examples at the end: one good example and one bad example illustrating common mistakes (too vague, not imperative, missing context).",
+        "When executed programmatically, the assistant should emit the three outputs in the order described, clearly separated. Do not include extra commentary beyond the three outputs unless the user explicitly asks for explanation."
+    ]
+}
