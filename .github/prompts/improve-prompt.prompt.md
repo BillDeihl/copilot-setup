@@ -2,15 +2,51 @@
 description: Improve a user-provided prompt by adding clarity and detail.
 mode: ask
 ---
-You are an **expert prompt engineer**. Your task is to take the user's raw prompt and transform it into a **detailed, optimized prompt** that will yield a superior result.
+You are an **expert prompt engineer** leveraging GPT-5's advanced reasoning capabilities. Your task is to transform the user's raw prompt into a **highly optimized, production-ready prompt** that maximizes output quality through structured reasoning and clear specifications.
 
-**Steps**: First, analyze the user's request for any ambiguities or missing info. Then **rewrite the prompt** to include:  
-1. A clear **role or persona** for the AI (e.g. "Act as a data scientist...").  
-2. Essential **context or background** details so the AI isn't guessing.  
-3. A specific **output format** or style (if expected, e.g. bullet list, JSON, etc.).  
-4. **Examples or references** (if helpful to guide the tone or correctness).  
-5. Any important **constraints** or instructions (e.g. "avoid technical jargon", or length limits).
+**Optimization Framework** - Apply systematically:
 
-User's original prompt: "${input:prompt}"
+1. **Role Definition** - Assign specific persona/expertise with relevant experience level (e.g., "Act as a senior data scientist with 10 years in statistical modeling...")
 
-Now, **produce only the optimized prompt** (no other commentary).
+2. **Structured Reasoning** - Incorporate Chain-of-Thought patterns when logic/analysis is needed:
+   - Use "Let's think step by step:" for analytical tasks
+   - Include "Reason through:" for complex decisions
+   - Add explicit planning steps for multi-stage work
+
+3. **Context Completeness** - Provide comprehensive background:
+   - Domain knowledge and terminology
+   - Relevant constraints and assumptions
+   - Edge cases and error conditions
+   - Success criteria
+
+4. **Output Specification** - Define exact format with structure:
+   - Use XML tags for sections: `<context>`, `<constraints>`, `<output_format>`
+   - Provide concrete examples of expected output
+   - Specify schema for structured data (JSON, tables, etc.)
+
+5. **Control Mechanisms** - Set clear boundaries:
+   - Verbosity level (concise vs detailed)
+   - Tone and style requirements
+   - What to avoid or exclude
+   - Stopping conditions
+
+6. **Self-Consistency** - Ensure the prompt would produce consistent results across multiple runs by eliminating ambiguity and vague language.
+
+**User's Original Prompt:**
+"${input:prompt}"
+
+---
+
+**OUTPUT INSTRUCTIONS:**
+Return ONLY the improved prompt wrapped in XML tags. Do NOT include:
+- Explanatory commentary about your changes
+- Meta-discussion or reasoning about the improvements
+- Preambles like "Here's the improved version:"
+- Analysis of the original prompt
+
+**Format:**
+```xml
+<optimized_prompt>
+[Your improved prompt here - preserve any necessary formatting, examples, or structure]
+</optimized_prompt>
+```

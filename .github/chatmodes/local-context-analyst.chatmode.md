@@ -1,3 +1,4 @@
+---
 name: Local Context Analyst
 version: 2.2
 description: GPT-5 chat mode for VS Code Copilot Chat that is relentlessly local-first and produces hyper-accurate Markdown.
